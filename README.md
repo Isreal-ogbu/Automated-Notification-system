@@ -17,6 +17,6 @@ To run this aplication:
     4. APIKEY
     5. phone
     6. DOMAIN
-7. Once all environment variabke has been set, run- npm start.
+7. Once all environment variable has been set, run- npm start.
 
 All Api should be properly running for test.
