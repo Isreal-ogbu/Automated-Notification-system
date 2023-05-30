@@ -15,10 +15,10 @@ async function paymentApi(req, res) {
 function processPayment(userid, notificationtype,  amount, cardNumber, cardExpiration, cvv) {
   // Replace this with your actual payment gateway integration logic
   return new Promise((resolve, reject) => {
-    // Simulate the payment processing with a delay
+    // I Simulate the payment processing with a delay
     setTimeout(async () => {
       // Use the transaction module to determine a payment result
-      const success = await transactionNotification(userid, amount, notificationtype);
+      const success = await transactionNotification(userid, amount, notificationtype); // A demo function to Perform transaction operation
       if (success == 1) {
         resolve({ success: true, message: "Transaction Successful", transactionId: 'T-1234567890' });
       } else if (success == 0) {

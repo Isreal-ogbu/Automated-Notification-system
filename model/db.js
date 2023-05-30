@@ -1,3 +1,7 @@
+// A like database to run application. This was intended
+// to make the app run anywhere and since it just a demo app.
+// A real database can be inplemented to make process call for if there is a reason to.
+
 async function userdb(){
     const users = [
         { id: 1, 

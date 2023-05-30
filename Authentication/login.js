@@ -25,7 +25,7 @@ function login(req, res) {
         return res.status(401).json({ message: 'Invalid password' });
       }
   
-      // Generate JWT token
+      // Generate a JWT token
       var data = { id: user.id, username: user.username }
       const token = jwt.sign(data, SECRET_KEY, { expiresIn: '1h' });
   
