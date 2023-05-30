@@ -25,7 +25,3 @@ function authenticateToken(req, res, next) {
 }
 
 module.exports = authenticateToken
-// Protected route that requires authentication
-// app.get('/protected', authenticateToken, (req, res) => {
-//   res.json({ message: 'You have accessed the protected route!', user: req.user });
-// });
