@@ -9,7 +9,6 @@ const SECRET_KEY = process.env.SECRET_KEY
 function login(req, res) {
   const username = req.body.username
     const password = req.body.password
-    console.log(username, password)
     const database = userdb()
     .then ((users)=> {
       const user = users.find((user) => user.username === username);

@@ -1,7 +1,8 @@
 const transactionNotifications = require("./transactionNotification")
 async function notificationApi(req, res){
     const { userid, amount, notificationtype} = req.params
-    new Promise((resolve, reject) => {
+    if (req.user.id == userid){
+      new Promise((resolve, reject) => {
         // Simulate the payment processing with a delay
         setTimeout(async () => {
           // Use the transaction module to determine a payment result
@@ -21,6 +22,10 @@ async function notificationApi(req, res){
       .catch(error => {
         res.status(500).json({result: { success: false, message: 'Payment failed', error: error.message }});
       });
+    }
+    else {
+      res.status(401).json({result: { success: false, message: 'Payment failed', error: "Unauthorized Transaction"}});
+    }
 }
 
 module.exports = notificationApi

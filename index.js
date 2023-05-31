@@ -6,6 +6,7 @@ var payment = require("./payment_gateway/payment")
 var user = require("./userManagement_service/user");
 var transactionNotifications = require("./notification_service/notify")
 var wallet = require("./userManagement_service/wallet");
+var errorhandler = require("errorhandler");
 
 var http = require("http");
 var morgan = require("morgan");
@@ -17,16 +18,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Error Handler
-app.use((err, req, res, next) => {
-  console.error(err);
-  res.status(err.statusCode || 500);
-  res.json({
-    error: {
-      message: err.message || 'Internal Server Error',
-    },
-  });
-});
-
+if ('development' == app.get("env")) {
+  app.use(errorhandler());
+}
 
 
 // Routes
