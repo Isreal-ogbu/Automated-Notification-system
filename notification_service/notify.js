@@ -7,7 +7,6 @@ async function notificationApi(req, res){
         setTimeout(async () => {
           // Use the transaction module to determine a payment result
           const success = await transactionNotifications(parseInt(userid), amount, notificationtype)
-          console.log(success)
           if (success == 1) {
             resolve({ success: true, message: "Transaction Successful", transactionId: 'T-1234567890' });
           } else if (success == 0) {
