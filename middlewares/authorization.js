@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const auth = require("../Authentication/logout");
-const SECRET_KEY = '$2b$10$zZ8MuiyHKIIapJMW/p5Yn.by.Pi/LTEDObBHzgtDnduG87BKBt5qu';
+const SECRET_KEY = '$2b$10$zZ8MuiyHKIIapJMW/p5Yn.by.Pi/LTEDObBHzgtDnduG87BKBt5qu'; // Same secret key in the .env to hash passord
 
 // Middleware to authenticate incoming requests
 function authenticateToken(req, res, next) {
