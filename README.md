@@ -1,5 +1,3 @@
-# stackivy_solution
-
 # This is a solution to the Task given: Automated Deposit Notification System
 The soultion was developed using Nodejs and Express Framwork. The main objective is to automate the process of sending nofications to a user to inform them about a successful transaction or when a transaction fails.
 
