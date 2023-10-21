@@ -1,6 +1,7 @@
-# This is a solution to the Task given: Automated Deposit Notification System
-The soultion was developed using Nodejs and Express Framwork. The main objective is to automate the process of sending nofications to a user to inform them about a successful transaction or when a transaction fails.
-
+# Automated Deposit Notification System
+---
+The main objective is to automate the process of sending nofications to a user to inform them about a successful transaction or when a transaction fails.
+---
 To run this aplication:
 
 1. Ensure you have nodejs insatlled on your machine.
@@ -18,3 +19,4 @@ To run this aplication:
 7. Once all environment variable has been set, run- npm start.
 
 All Api should be properly running for test.
+---
